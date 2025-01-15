@@ -10,7 +10,7 @@ Enemy::Enemy(Vector2 pos, Vector2 radius, Vector2 speed) {
 void Enemy::Move(char* keys) {
 	if (isActive_) {
 		
-		if (!life) {
+		if (life<=0) {
 			isActive_ = false;
 		}
 		pos_.x += speed_.x;
